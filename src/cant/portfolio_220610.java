@@ -8,27 +8,27 @@ public class portfolio_220610 {
         try {
         Scanner scanner = new Scanner(System.in);
 
-        // ½Ã
+        // ì‹œ
         int A = scanner.nextInt();
 
-        // ºĞ
+        // ë¶„
         int B = scanner.nextInt();
 
-        // ÃÊ
+        // ì´ˆ
         int C = scanner.nextInt();
 
-        // ¿ä¸®ÇÏ´Âµ¥ ÇÊ¿äÇÑ ½Ã°£
+        // ìš”ë¦¬í•˜ëŠ”ë° í•„ìš”í•œ ì‹œê°„
         Scanner scanner2 = new Scanner(System.in);
         int D = scanner2.nextInt();
 
-        // ½Ã : A(0<=A<=23), ºĞ : B(0<=B<=59), ÃÊ : C(0<=C<=59)
+        // ì‹œ : A(0<=A<=23), ë¶„ : B(0<=B<=59), ì´ˆ : C(0<=C<=59)
         if ( 0 <= A && A <= 23 && 0 <= B && B <= 59 && 0 <= C && C <= 59 && 0 <= D && D <= 500000 ) {
 
-            // ÃÊ
+            // ì´ˆ
             int second = D % 60;
-            // ºĞ
+            // ë¶„
             int minute = D / 60;
-            // ½Ã 
+            // ì‹œ 
             int hour = 0;
             if ( minute > 60 ) {
                 hour = minute/60;
@@ -39,13 +39,13 @@ public class portfolio_220610 {
             B += minute;
             C += second;
 
-            // ÃÊ(60ÃÊ¸¦ ³ÑÀº °æ¿ì) -> ºĞ
+            // ì´ˆ(60ì´ˆë¥¼ ë„˜ì€ ê²½ìš°) -> ë¶„
             if ( C >= 60 ) {
                 B = B + (C/60);
                 C = C % 60;
             }
 
-            // ºĞ(60ºĞÀÌ ³ÑÀº °æ¿ì) -> ½Ã
+            // ë¶„(60ë¶„ì´ ë„˜ì€ ê²½ìš°) -> ì‹œ
             if ( B >= 60 ) {
 
                 A = A + (B/60);
@@ -55,7 +55,7 @@ public class portfolio_220610 {
             if ( A == 24 ) 
                 A = 0;
 
-            // ½Ã°£(24½Ã°¡ ³ÑÀº °æ¿ì) 
+            // ì‹œê°„(24ì‹œê°€ ë„˜ì€ ê²½ìš°) 
             if ( A > 24 ) {
                 A  = (A/24) + (A%24); 
             }
@@ -64,12 +64,14 @@ public class portfolio_220610 {
         } 
 
         else {
-            System.out.println("Àß¸øµÈ ÀÔ·Â°ªÀÔ´Ï´Ù.");
+            System.out.println("ì˜ëª»ëœ ì…ë ¥ê°’ì…ë‹ˆë‹¤.");
         }
 
     } catch(Exception e) {
-        System.out.println("¿À·ù ¹ß»ı");
+        System.out.println("ì˜¤ë¥˜ ë°œìƒ");
     }
   }
 
 }
+
+// ë¬¸ì œ : https://www.acmicpc.net/problem/2530
