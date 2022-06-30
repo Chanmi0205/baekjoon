@@ -1,4 +1,4 @@
-package portoflio_220629;
+package portfolio_220629;
 
 import java.util.Scanner;
 
